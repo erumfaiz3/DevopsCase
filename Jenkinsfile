@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 bat '''
-                set KUBECONFIG=C:\\Users\\vr_ma\\.kube\\config
+                set KUBECONFIG=C:\\Users\\Administrator\\.kube\\config
                 kubectl cluster-info 
                 kubectl apply -f deployment.yaml
                 kubectl apply -f service.yaml
