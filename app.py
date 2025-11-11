@@ -3,7 +3,7 @@ from flask import Flask, render_template_string, request, jsonify
 app = Flask(__name__)
 
 # Load the HTML content (single file website)
-with open("index.html", "r", encoding="utf-8") as f:
+with open("templates/index.html", "r", encoding="utf-8") as f:
     html_content = f.read()
 
 
