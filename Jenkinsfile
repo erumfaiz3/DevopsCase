@@ -5,21 +5,21 @@ pipeline {
         stage('Build Docker Image') { 
             steps { 
                 echo "Building Docker Image..."
-                bat "docker build -t tictactoe:latest ."
+                bat "docker build -t makemytrip:latest ."
             } 
         }
         stage('Docker login') {
             steps {
-                bat 'docker login -u sreeja20082004 -p Sreeja@12'
+                bat 'docker login -u erumfaiz -p Erum@3005'
             }
         }
 
         stage('push Docker image to docker hub'){
             steps{
                 echo "push Docker image to docker hub"
-                bat "docker tag tictactoe:latest sreeja20082004/sample:v1"
+                bat "docker tag makemytrip:latest erumfaiz/sample:v1"
 
-                bat "docker push sreeja20082004/sample:v1"
+                bat "docker push erumfaiz/sample:v1"
             }
         }
         stage('Deploy to Kubernetes') {
