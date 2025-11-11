@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: tictactoe-service
+  name: makemytrip-service
 spec:
   selector:
-    app: tictactoe
+    app: makemytrip
   ports:
     - protocol: TCP
       port: 5000
